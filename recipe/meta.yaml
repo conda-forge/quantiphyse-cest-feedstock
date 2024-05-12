@@ -1,5 +1,5 @@
 {% set name = "quantiphyse-cest" %}
-{% set version = "0.9.1" %}
+{% set version = "0.9.1.post8" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quantiphyse-cest-{{ version }}.tar.gz
-  sha256: faf2ed9546da723ec9d7e401cbbc8d9e10cd016bf6ffc7ae76b0d2fc6f19b688
+  sha256: 37742d29f3a972ecef72628f32e45dda4059ed39ef7e5cf607f66b4c941f7c8a
 
 build:
   number: 0
