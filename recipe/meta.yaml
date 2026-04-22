@@ -7,24 +7,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quantiphyse-cest-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quantiphyse-cest-{{ version }}.tar.gz
   sha256: faf2ed9546da723ec9d7e401cbbc8d9e10cd016bf6ffc7ae76b0d2fc6f19b688
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - quantiphyse-fabber
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - quanticest
 
